@@ -1,5 +1,9 @@
 Revision history for Games::Trackword
 
+1.04	21/03/2005
+	- More tests thanks to Devel::Cover
+	- Added DSLIP information
+
 1.03	19/03/2005
 	- Reworked test scripts
 	- Added pod test scripts

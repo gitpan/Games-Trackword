@@ -13,7 +13,7 @@ my @boards = (
 );
 
 my @good = qw/TRACK trackword WORD/;
-my @fail = qw/BEETS TITHED THREE PEEP QEET TEEPEE/;
+my @fail = qw/QEET WOOD/;
 
 foreach my $inx (0..2) {
 	my $board = Games::Trackword->new($boards[$inx]);
@@ -37,7 +37,17 @@ foreach my $inx (3..4) {
 	ok !$board->has_word($boogle), "Found $boogle!";
 	ok $board->has_word($both), "Can't find $both!";
 
-	$board->qu;
+	$board->qu;	# default set to 1
+	ok !$board->has_word($trackword), "Found $trackword!";
+	ok !$board->has_word($both), "Found $both!";
+	ok $board->has_word($boogle), "Can't find $boogle!";
+
+	$board->qu(0);
+	ok $board->has_word($trackword), "Can't find $trackword!";
+	ok !$board->has_word($boogle), "Found $boogle!";
+	ok $board->has_word($both), "Can't find $both!";
+
+	$board->qu(1);
 	ok !$board->has_word($trackword), "Found $trackword!";
 	ok !$board->has_word($both), "Found $both!";
 	ok $board->has_word($boogle), "Can't find $boogle!";

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '1.03';
+$VERSION = '1.04';
 
 #----------------------------------------------------------------------------
 
@@ -176,6 +176,14 @@ and bigger, and also forced the use of Qu rather Q & U. Much of the code
 here steals from Tony's module.
 
 See L<Games::Boggle> if you want a traditional Boggle rules module.
+
+=head1 DSLIP
+
+  R - Released
+  d - Developer
+  p - Perl only
+  O - Object oriented
+  p - Standard Perl
 
 =head1 AUTHOR
 

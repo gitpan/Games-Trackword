@@ -6,6 +6,14 @@ DESCRIPTION
 This module lets you set up a Trackword grid, and then query it for whether
 or not it is possible to find words on that grid.
 
+DSLIP
+
+ R - Released
+ d - Developer
+ p - Perl only
+ O - Object oriented
+ p - Standard Perl
+
 DEPENDENCIES
 
 This module has no dependencies.
