@@ -1,8 +1,18 @@
 Games::Trackword
 ================
 
+DESCRIPTION
+
 This module lets you set up a Trackword grid, and then query it for whether
 or not it is possible to find words on that grid.
+
+DEPENDENCIES
+
+This module has no dependencies.
+
+CHANGES
+
+See the Changes file for a list of updates to the distribution.
 
 INSTALLATION
 
@@ -13,17 +23,20 @@ To install this module type the following:
    make test
    make install
 
-DEPENDENCIES
-
-This module has no dependencies.
-
 AUTHOR
 
-Barbie <barbie@missbarbell.co.uk>
+Barbie, <modules@missbarbell.co.uk>, http://birmingham.pm.org/
+
+Miss Barbell Productions.
+
+LATEST REVISION
+
+$Revision: 1.01 $
 
 COPYRIGHT 
 
-Copyright (C) 2003 Barbie. All rights reserved.
+Copyright (C) 2003 Barbie & Miss Barbell Productions.
+All Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

@@ -1,6 +1,7 @@
 Changes
-MANIFEST			This list of files
+MANIFEST			
 Makefile.PL
+META.yml
 README
 lib/Games/Trackword.pm
 t/01.t

@@ -7,6 +7,6 @@ WriteMakefile(
 	}, 
 	($] < 5.005 ? () : (
 		ABSTRACT_FROM => 'lib/Games/Trackword.pm', 
-		AUTHOR     => 'Barbie <barbie@missbarbell.co.uk>'
+		AUTHOR     => 'Barbie <barbie@cpan.org>'
 	)),
 );

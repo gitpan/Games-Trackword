@@ -1,5 +1,9 @@
 Revision history for Games::Trackword
 
+1.01  Wed Oct  8 13:04:18 GMTDT 2003
+	- META.yml added to distribution
+	- POD updates
+
 1.0  02/09/2003
         - Original version
 

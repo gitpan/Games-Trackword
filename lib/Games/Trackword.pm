@@ -1,90 +1,41 @@
 package Games::Trackword;
 
+use strict;
+use warnings;
+
+use vars qw($VERSION);
+$VERSION = '1.01';
+
+### CHANGES #########################################################
+#   1.0    02/09/2003   Initial Release
+#   1.01   08/10/2003	META.yml added
+#                       POD updates & fixed VERSION
+#####################################################################
+
+#----------------------------------------------------------------------------
+
 =head1 NAME
 
 Games::Trackword - find words on a Trackword grid.
 
 =head1 SYNOPSIS
 
-	use Games::Trackword;
+  use Games::Trackword;
 
-	my $board = Games::Trackword->new('TRA WKC ORD');
+  my $board = Games::Trackword->new('TRA WKC ORD');
 
-	foreach my $word (@wordlist) {
-		print "OK $word\n" if $board->has_word($word);
-	}
+  foreach my $word (@wordlist) {
+    print "OK $word\n" if $board->has_word($word);
+  }
 
 =head1 DESCRIPTION
 
-This module lets you set up a Trackword grid, and then query it for whether
+This module lets you set up a Trackword grid and query whether
 or not it is possible to find words on that grid.
 
 Similar to Boggle, but not restricted by the size of the grid.
 
-=head1 METHODS
-
-=head2 new
-
-	my $board = Games::Trackword->new('TRA WKC ORD');
-
-	# TRA
-	# WKC
-	# ORD
-
-You initialize the board with a series of letter blocks representing the
-letters that are shown on the grid. Spaces (or non alphabeticmay be inserted to make the
-board string more readable.
-
-Grids bigger than 3x3, are simply represented a long strings separated by spaces:
-
-	my $board4 = Games::Trackword->new('TRAC ROWK DTR WKCA');
-	my $board5 = Games::Trackword->new('TRACK TDROW RACKW RTDRO ACKWO');
-
-=head2 qu
-
-	$board->qu();	# Boggle rules
-	$board->qu(0);	# Trackword rules (default)
-
-Use if 'Qu' should be represented as a 'Q' (as per Boggle).
-
-Words containing the letter Q should be entered in full ('Queen', rather
-than 'qeen'). Words containing a 'Q' not immediately followed by a 'U'
-are never playable in Boggle.
-
-=head2 has_word
-
-	print "OK $word\n" if $board->has_word('tithe');
-	print "NOT OK $word\n" unless $board->has_word('queen');
-
-Given any word, we return whether or not that word can be found on the
-board following the normal rules of Trackword (and Boggle).
-
-=head1 ACKNOWLEDGEMENTS
-
-The original idea for this came from my disappointment that Tony Bowden's 
-Games::Boggle module couldn't handle Trackword style grids (typically 3x3)
-and bigger, and also forced the use of Qu rather Q & U. Much of the code
-here steals from Tony's module.
-
-See L<Games::Boggle> if you want a traditional Boggle rules module.
-
-=head1 AUTHOR
-
-Barbie, L<E<lt>barbie@cpan.orgE<gt>>
-
-=head1 COPYRIGHT
-
-Copyright (C) 2003 Barbie. All rights reserved.
-
-This module is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
 =cut
-
-$VERSION = '1.0';
-
-use strict;
-use warnings;
 
 my @directions = ([-1,0],[0,-1],[1,0],[0,1]);
 
@@ -164,3 +115,81 @@ sub _ring_fence {
 }
 
 1;
+
+__END__
+
+=head1 METHODS
+
+=over 4
+
+=item new
+
+  my $board = Games::Trackword->new('TRA WKC ORD');
+
+  # TRA
+  # WKC
+  # ORD
+
+You initialize the board with a series of letter blocks representing the
+letters that are shown on the grid. Spaces (or non alphabetics) may be 
+inserted to make the board string more readable.
+
+Grids bigger than 3x3, are simply represented by long strings separated by spaces:
+
+  my $board4 = Games::Trackword->new('TRAC ROWK DTR WKCA');
+  my $board5 = Games::Trackword->new('TRACK TDROW RACKW RTDRO ACKWO');
+
+=item qu
+
+  $board->qu();  # Boggle rules
+  $board->qu(0);  # Trackword rules (default)
+
+Use if 'Qu' should be represented as a 'Q' (as per Boggle). In this instance
+words containing the letter Q should be entered in full ('Queen', rather
+than 'qeen'). Note that in Boggle words containing a 'Q' not immediately 
+followed by a 'U' are never playable.
+
+=item has_word
+
+  print "OK $word\n" if $board->has_word('tithe');
+  print "NOT OK $word\n" unless $board->has_word('queen');
+
+Given any word, we return whether or not that word can be found on the
+board following the normal rules of Trackword (and Boggle).
+
+=back
+
+=head1 BUGS & ENHANCEMENTS
+
+By its very nature the size of grid is the only limiting factor of this
+module. If you can create a grid that is too large to fit in memory, the
+author recommends that you not to do that!
+
+If you think you've found a bug or would have a suggestion for an enhancement 
+to the current code, send details and patches (if you have one) to 
+E<lt>modules@missbarbell.co.ukE<gt>.
+
+=head1 ACKNOWLEDGEMENTS
+
+The original idea for this came from my disappointment that Tony Bowden's 
+Games::Boggle module couldn't handle Trackword style grids (typically 3x3)
+and bigger, and also forced the use of Qu rather Q & U. Much of the code
+here steals from Tony's module.
+
+See L<Games::Boggle> if you want a traditional Boggle rules module.
+
+=head1 AUTHOR
+
+Barbie, E<lt>barbie@cpan.orgE<gt>
+for Miss Barbell Productions L<http://www.missbarbell.co.uk>.
+
+=head1 COPYRIGHT
+
+  Copyright (C) 2003 Barbie for Miss Barbell Productions
+  All Rights Reserved.
+
+  This module is free software; you can redistribute it and/or 
+  modify it under the same terms as Perl itself.
+
+=cut
+
