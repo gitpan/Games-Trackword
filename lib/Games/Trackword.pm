@@ -4,19 +4,20 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 ### CHANGES #########################################################
-#   1.0    02/09/2003   Initial Release
-#   1.01   08/10/2003	META.yml added
+#   1.0		02/09/2003	Initial Release
+#   1.01	08/10/2003	META.yml added
 #                       POD updates & fixed VERSION
+#	1.02	19/04/2004	ABSTRACT fixed. Line endings fixed.
 #####################################################################
 
 #----------------------------------------------------------------------------
 
 =head1 NAME
 
-Games::Trackword - find words on a Trackword grid.
+Games::Trackword - Find words on a Trackword grid.
 
 =head1 SYNOPSIS
 
