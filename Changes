@@ -1,12 +1,16 @@
 Revision history for Games::Trackword
 
+1.03	19/03/2005
+	- Reworked test scripts
+	- Added pod test scripts
+
 1.02	19/04/2004
-		- ABSTRACT fixed. Line endings fixed.
+	- ABSTRACT fixed. Line endings fixed.
 
-1.01	Wed Oct  8 13:04:18 GMTDT 2003
-		- META.yml added to distribution
-		- POD updates
+1.01	08/10/2003
+	- META.yml added to distribution
+	- POD updates
 
-1.0		02/09/2003
+1.00	02/09/2003
         - Original version
 

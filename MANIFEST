@@ -4,4 +4,7 @@ Makefile.PL
 META.yml
 README
 lib/Games/Trackword.pm
-t/01.t
+t/01basic.t
+t/02board.t
+t/90podtest.t
+t/91podcover.t

@@ -4,14 +4,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '1.02';
-
-### CHANGES #########################################################
-#   1.0		02/09/2003	Initial Release
-#   1.01	08/10/2003	META.yml added
-#                       POD updates & fixed VERSION
-#	1.02	19/04/2004	ABSTRACT fixed. Line endings fixed.
-#####################################################################
+$VERSION = '1.03';
 
 #----------------------------------------------------------------------------
 
@@ -160,15 +153,20 @@ board following the normal rules of Trackword (and Boggle).
 
 =back
 
-=head1 BUGS & ENHANCEMENTS
+=head1 BUGS, PATCHES & FIXES
 
 By its very nature the size of grid is the only limiting factor of this
 module. If you can create a grid that is too large to fit in memory, the
 author recommends that you not to do that!
 
-If you think you've found a bug or would have a suggestion for an enhancement 
-to the current code, send details and patches (if you have one) to 
-E<lt>modules@missbarbell.co.ukE<gt>.
+If you think you've found a bug, have a suggestion for an enhancement or
+are experiencing difficulties that are not explained within the POD
+documentation, please send an email to barbie@cpan.org or submit a bug to the
+RT system (http://rt.cpan.org/). However, it would help greatly if you are 
+able to pinpoint problems or even supply a patch. 
+
+Fixes are dependant upon their severity and my availablity. Should a fix not
+be forthcoming, please feel free to (politely) remind me.
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -181,12 +179,12 @@ See L<Games::Boggle> if you want a traditional Boggle rules module.
 
 =head1 AUTHOR
 
-Barbie, E<lt>barbie@cpan.orgE<gt>
-for Miss Barbell Productions L<http://www.missbarbell.co.uk>.
+  Barbie, <barbie@cpan.org>
+  for Miss Barbell Productions <http://www.missbarbell.co.uk>.
 
 =head1 COPYRIGHT
 
-  Copyright (C) 2003 Barbie for Miss Barbell Productions
+  Copyright (C) 2003-2005 Barbie for Miss Barbell Productions
   All Rights Reserved.
 
   This module is free software; you can redistribute it and/or 

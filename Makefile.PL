@@ -2,7 +2,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
 	NAME			=> 'Games::Trackword',
 	VERSION_FROM	=> 'lib/Games/Trackword.pm', 
-	PREREQ_PM => { 
+	PREREQ_PM		=> { 
 		'Test::More' => 0.45,
 	}, 
 	($] < 5.005 ? () : (

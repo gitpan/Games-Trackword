@@ -1,20 +1,22 @@
 #!/usr/bin/perl -w
 
-use Test::More qw/no_plan/;
-
+use Test::More tests => 44;
 use Games::Trackword;
 
 my @boards = ( 
 	'TRA WKC ORD',
 	'TRAC ROWK DTR WKCA',
 	'TRACK TDROW RACKW RTDRO ACKWO',
+
+	'QEE ATN RAE',
+	'QATAR PLACE QEENS BLANK IDEAS',
 );
 
 my @good = qw/TRACK trackword WORD/;
 my @fail = qw/BEETS TITHED THREE PEEP QEET TEEPEE/;
 
-foreach my $string (@boards) {
-	my $board = Games::Trackword->new($string);
+foreach my $inx (0..2) {
+	my $board = Games::Trackword->new($boards[$inx]);
 	isa_ok $board, "Games::Trackword";
 	foreach my $word (@good) {
 	  ok $board->has_word($word), "Can't find $word!";
@@ -24,17 +26,12 @@ foreach my $string (@boards) {
 	}
 }
 
-@boards = ( 
-	'QEE ATN RAE',
-	'QATAR PLACE QEENS BLANK IDEAS',
-);
-
 my $trackword = 'QEEN';
 my $boogle = 'QUEEN';
 my $both = 'QATAR';
 
-foreach my $string (@boards) {
-	my $board = Games::Trackword->new($string);
+foreach my $inx (3..4) {
+	my $board = Games::Trackword->new($boards[$inx]);
 	isa_ok $board, "Games::Trackword";
 	ok $board->has_word($trackword), "Can't find $trackword!";
 	ok !$board->has_word($boogle), "Found $boogle!";
