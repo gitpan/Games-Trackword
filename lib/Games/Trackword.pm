@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '1.04';
+$VERSION = '1.05';
 
 #----------------------------------------------------------------------------
 
@@ -24,10 +24,12 @@ Games::Trackword - Find words on a Trackword grid.
 
 =head1 DESCRIPTION
 
-This module lets you set up a Trackword grid and query whether
-or not it is possible to find words on that grid.
+This module lets you set up a Trackword grid and query whether or not it is 
+possible to find words on that grid.
 
-Similar to Boggle, but not restricted by the size of the grid.
+Note that although Trackword is similar to Boggle, you are not restricted by 
+the size of the grid and you cannot move diagonally between each letter, you
+may only move up/down or left/right.
 
 =cut
 
@@ -102,9 +104,9 @@ sub _can_play {
 sub _ring_fence {
 	my @block = split /\s/, uc $_[0];
 	my $width = length($block[0])+2;
-	push my @board, [('-') x $width];
-	push @board, map {['-',split(//),'-']} @block;
-	push @board, [('-') x $width];
+	push my @board, [('-') x $width],
+	                (map {['-',split(//),'-']} @block),
+	                [('-') x $width];
 	return \@board;
 }
 
@@ -159,14 +161,17 @@ By its very nature the size of grid is the only limiting factor of this
 module. If you can create a grid that is too large to fit in memory, the
 author recommends that you not to do that!
 
-If you think you've found a bug, have a suggestion for an enhancement or
-are experiencing difficulties that are not explained within the POD
-documentation, please send an email to barbie@cpan.org or submit a bug to the
-RT system (http://rt.cpan.org/). However, it would help greatly if you are 
-able to pinpoint problems or even supply a patch. 
+There are no known bugs at the time of this release. However, if you spot a
+bug or are experiencing difficulties that are not explained within the POD
+documentation, please submit a bug to the RT system (see link below). However,
+it would help greatly if you are able to pinpoint problems or even supply a 
+patch. 
 
 Fixes are dependant upon their severity and my availablity. Should a fix not
-be forthcoming, please feel free to (politely) remind me.
+be forthcoming, please feel free to (politely) remind me by sending an email
+to barbie@cpan.org .
+
+RT: L<http://rt.cpan.org/Public/Dist/Display.html?Name=Games-Trackword>
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -192,11 +197,14 @@ See L<Games::Boggle> if you want a traditional Boggle rules module.
 
 =head1 COPYRIGHT
 
-  Copyright (C) 2003-2005 Barbie for Miss Barbell Productions
-  All Rights Reserved.
+    Copyright © 2003-2007 Barbie for Miss Barbell Productions. 
 
-  This module is free software; you can redistribute it and/or 
-  modify it under the same terms as Perl itself.
+    This library is free software; you can redistribute it and/or modify it under
+    the same terms as Perl itself, using the Artistic License.
+
+The full text of the licenses can be found in the Artistic file included with 
+this distribution, or in perlartistic file as part of Perl installation, in 
+the 5.8.1 release or later.
 
 =cut
 

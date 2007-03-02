@@ -1,10 +1,14 @@
+Artistic
 Changes
-MANIFEST			
-Makefile.PL
+LICENSE
+MANIFEST
 META.yml
+Makefile.PL
 README
+examples/examples.txt
 lib/Games/Trackword.pm
 t/01basic.t
 t/02board.t
 t/90podtest.t
 t/91podcover.t
+t/94metatest.t
