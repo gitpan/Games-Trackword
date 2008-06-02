@@ -1,6 +1,6 @@
 use Test::More;
-eval "use Test::YAML::Meta";
-plan skip_all => "Test::YAML::Meta required for testing META.yml" if $@;
+eval "use Test::CPAN::Meta";
+plan skip_all => "Test::CPAN::Meta required for testing META.yml" if $@;
 meta_yaml_ok();
 
 

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '1.05';
+$VERSION = '1.06';
 
 #----------------------------------------------------------------------------
 
@@ -24,10 +24,10 @@ Games::Trackword - Find words on a Trackword grid.
 
 =head1 DESCRIPTION
 
-This module lets you set up a Trackword grid and query whether or not it is 
+This module lets you set up a Trackword grid and query whether or not it is
 possible to find words on that grid.
 
-Note that although Trackword is similar to Boggle, you are not restricted by 
+Note that although Trackword is similar to Boggle, you are not restricted by
 the size of the grid and you cannot move diagonally between each letter, you
 may only move up/down or left/right.
 
@@ -127,7 +127,7 @@ __END__
   # ORD
 
 You initialize the board with a series of letter blocks representing the
-letters that are shown on the grid. Spaces (or non alphabetics) may be 
+letters that are shown on the grid. Spaces (or non alphabetics) may be
 inserted to make the board string more readable.
 
 Grids bigger than 3x3, are simply represented by long strings separated by spaces:
@@ -142,7 +142,7 @@ Grids bigger than 3x3, are simply represented by long strings separated by space
 
 Use if 'Qu' should be represented as a 'Q' (as per Boggle). In this instance
 words containing the letter Q should be entered in full ('Queen', rather
-than 'qeen'). Note that in Boggle words containing a 'Q' not immediately 
+than 'qeen'). Note that in Boggle words containing a 'Q' not immediately
 followed by a 'U' are never playable.
 
 =item has_word
@@ -164,8 +164,8 @@ author recommends that you not to do that!
 There are no known bugs at the time of this release. However, if you spot a
 bug or are experiencing difficulties that are not explained within the POD
 documentation, please submit a bug to the RT system (see link below). However,
-it would help greatly if you are able to pinpoint problems or even supply a 
-patch. 
+it would help greatly if you are able to pinpoint problems or even supply a
+patch.
 
 Fixes are dependant upon their severity and my availablity. Should a fix not
 be forthcoming, please feel free to (politely) remind me by sending an email
@@ -175,7 +175,7 @@ RT: L<http://rt.cpan.org/Public/Dist/Display.html?Name=Games-Trackword>
 
 =head1 ACKNOWLEDGEMENTS
 
-The original idea for this came from my disappointment that Tony Bowden's 
+The original idea for this came from my disappointment that Tony Bowden's
 Games::Boggle module couldn't handle Trackword style grids (typically 3x3)
 and bigger, and also forced the use of Qu rather Q & U. Much of the code
 here steals from Tony's module.
@@ -197,13 +197,13 @@ See L<Games::Boggle> if you want a traditional Boggle rules module.
 
 =head1 COPYRIGHT
 
-    Copyright © 2003-2007 Barbie for Miss Barbell Productions. 
+    Copyright © 2003-2007 Barbie for Miss Barbell Productions.
 
     This library is free software; you can redistribute it and/or modify it under
     the same terms as Perl itself, using the Artistic License.
 
-The full text of the licenses can be found in the Artistic file included with 
-this distribution, or in perlartistic file as part of Perl installation, in 
+The full text of the licenses can be found in the Artistic file included with
+this distribution, or in perlartistic file as part of Perl installation, in
 the 5.8.1 release or later.
 
 =cut

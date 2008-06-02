@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                   Games-Trackword
-version:                1.05
+version:                1.06
 abstract:               A collection of modules for accessing phrasebooks from various data sources.
 author:
   - Barbie <barbie@cpan.org>
@@ -15,14 +15,14 @@ recommends:
   Test::More:           0.47
   Test::Pod:            1.00
   Test::Pod::Coverage:  0.08
-  Test::YAML::Valid:    0
+  Test::CPAN::Meta:     0
 build_requires:
   Test::More:           0.47
 
 provides:
   Games::Trackword:
     file:     lib/Games/Trackword.pm
-    version:  1.05
+    version:  1.06
 no_index:
   directory:
     - t

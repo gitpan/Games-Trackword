@@ -1,5 +1,8 @@
 Revision history for Games::Trackword
 
+1.06	02/06/2008
+	- updated Meta.yml and 94metatest.t to reference Test-CPAN-Meta.
+
 1.05	02/03/2007
 	- Handwritten META.yml to conform to current specs.
 	- Changed all instances of LICENCE to LICENSE.
