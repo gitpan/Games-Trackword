@@ -1,4 +1,5 @@
 #!/usr/bin/perl -w
+use strict;
 
 use Test::More tests => 44;
 use Games::Trackword;
@@ -52,4 +53,3 @@ foreach my $inx (3..4) {
 	ok !$board->has_word($both), "Found $both!";
 	ok $board->has_word($boogle), "Can't find $boogle!";
 }
-

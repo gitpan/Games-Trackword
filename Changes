@@ -1,33 +1,42 @@
 Revision history for Games::Trackword
 
-1.06	02/06/2008
-	- updated Meta.yml and 94metatest.t to reference Test-CPAN-Meta.
+1.07    2012-12-31
+        - change file dates changed to meet W3CDTF standards.
+        - License updated to Artistic License v2.0.
+        - added META.json.
+        - added minimum perl version (5.006).
+        - reworked Makefile.PL for clarity.
+        - updated test suite.
+        - removed Artictic License file.
 
-1.05	02/03/2007
-	- Handwritten META.yml to conform to current specs.
-	- Changed all instances of LICENCE to LICENSE.
-	- Added META.yml test script.
-	- Added LICENSE and Artistic files.
-	- Added an examples directory. Nothing in it yet, except a request
-	  for interesting scripts.
-	- POD/README updates
-	- Devel::Cover - 100%
+1.06    2008-06-02
+        - updated Meta.yml and 94metatest.t to reference Test-CPAN-Meta.
 
-1.04	21/03/2005
-	- More tests thanks to Devel::Cover
-	- Added DSLIP information
+1.05    2007-03-02
+        - Handwritten META.yml to conform to current specs.
+        - Changed all instances of LICENCE to LICENSE.
+        - Added META.yml test script.
+        - Added LICENSE and Artistic files.
+        - Added an examples directory. Nothing in it yet, except a request
+          for interesting scripts.
+        - POD/README updates
+        - Devel::Cover - 100%
 
-1.03	19/03/2005
-	- Reworked test scripts
-	- Added pod test scripts
+1.04    2005-03-21
+        - More tests thanks to Devel::Cover
+        - Added DSLIP information
 
-1.02	19/04/2004
-	- ABSTRACT fixed. Line endings fixed.
+1.03    2005-03-19
+        - Reworked test scripts
+        - Added pod test scripts
 
-1.01	08/10/2003
-	- META.yml added to distribution
-	- POD updates
+1.02    2004-04-19
+        - ABSTRACT fixed. Line endings fixed.
 
-1.00	02/09/2003
+1.01    2003-10-08
+        - META.yml added to distribution
+        - POD updates
+
+1.00    2003-09-02
         - Original version
 

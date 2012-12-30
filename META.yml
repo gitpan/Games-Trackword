@@ -1,34 +1,35 @@
 --- #YAML:1.0
 name:                   Games-Trackword
-version:                1.06
-abstract:               A collection of modules for accessing phrasebooks from various data sources.
+version:                1.07
+abstract:               A module to help find words on a Trackword grid
 author:
   - Barbie <barbie@cpan.org>
 
-license:                perl
+license:                artistic_2
 distribution_type:      module
 installdirs:            site
 
 requires:
-  Test::More:           0.47
+  perl:                           5.006
 recommends:
-  Test::More:           0.47
-  Test::Pod:            1.00
-  Test::Pod::Coverage:  0.08
-  Test::CPAN::Meta:     0
+  Test::CPAN::Meta:               0
+  Test::CPAN::Meta::JSON:         0
+  Test::Pod:                      1.00
+  Test::Pod::Coverage:            0.08
 build_requires:
-  Test::More:           0.47
+  IO::File:                       0
+  Test::More:                     0.70
 
 provides:
   Games::Trackword:
     file:     lib/Games/Trackword.pm
-    version:  1.06
+    version:  1.07
 no_index:
   directory:
     - t
     - examples
 
 meta-spec:
- version:     1.3
- url:         http://module-build.sourceforge.net/META-spec-v1.3.html
+   version:   1.4
+   url:       http://module-build.sourceforge.net/META-spec-v1.4.html
 generated_by: Hand 1.0

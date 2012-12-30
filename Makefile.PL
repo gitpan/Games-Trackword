@@ -1,14 +1,23 @@
-use ExtUtils::MakeMaker;
-WriteMakefile(
-	NAME			=> 'Games::Trackword',
-	VERSION_FROM	=> 'lib/Games/Trackword.pm', 
-	PREREQ_PM		=> { 
-		'Test::More' => 0.47,
-	}, 
-	NO_META			=> 1,
+#!/usr/bin/perl
 
-	($] < 5.005 ? () : (
-		ABSTRACT	=> 'Find words on a Trackword grid.', 
-		AUTHOR		=> 'Barbie <barbie@cpan.org>'
-	)),
+use strict;
+use warnings;
+use 5.006;
+
+use ExtUtils::MakeMaker;
+
+WriteMakefile(
+    AUTHOR              => 'Barbie <barbie@cpan.org>',
+    NAME                => 'Games::Trackword',
+    VERSION_FROM        => 'lib/Games/Trackword.pm',
+    ABSTRACT            => 'A module to help find words on a Trackword grid',
+    NO_META             => 1,
+
+    PREREQ_PM           => {
+
+        # build/test prereqs
+        'IO::File'                          => 0,
+        'Test::More'                        => '0.70'
+
+    },
 );
