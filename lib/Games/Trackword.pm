@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = '1.07';
+$VERSION = '1.08';
 
 #----------------------------------------------------------------------------
 
@@ -189,9 +189,9 @@ See L<Games::Boggle> if you want a traditional Boggle rules module.
 
 =head1 COPYRIGHT
 
-  Copyright (C) 2003-2012 Barbie for Miss Barbell Productions.
+  Copyright (C) 2003-2014 Barbie for Miss Barbell Productions.
 
-  This module is free software; you can redistribute it and/or
+  This distribution is free software; you can redistribute it and/or
   modify it under the Artistic License 2.0.
 
 =cut

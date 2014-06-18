@@ -1,6 +1,6 @@
 {
     "name": "Games-Trackword",
-    "version": "1.07",
+    "version": "1.08",
     "abstract": "A module to help find words on a Trackword grid",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -41,7 +41,7 @@
     "provides": {
         "Games::Trackword": {
             "file": "lib/Games/Trackword.pm",
-            "version": "1.07"
+            "version": "1.08"
         }
     },
     "no_index": {
@@ -50,6 +50,11 @@
 
     "resources": {
         "license": "http://dev.perl.org/licenses/",
-        "bugtracker": { "web": "http://rt.cpan.org/Public/Dist/Display.html?Name=Games-Trackword" }
+        "bugtracker": { "web": "http://rt.cpan.org/Public/Dist/Display.html?Name=Games-Trackword" },
+        "repository": {
+            "url": "git://github.com/barbie/games-trackword.git",
+            "web": "http://github.com/barbie/games-trackword",
+            "type": "git"
+        }
     }
 }
