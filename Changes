@@ -1,7 +1,11 @@
 Revision history for Games-Trackword
 ====================================
 
-1.08    2014-06-28
+1.09    2014-10-10
+        - fixed license fields in META.json to be lists.
+        - extended META test suites.
+
+1.08    2014-06-18
         - fixed distribution name in META.
         - added git repository links to metadata.
 
